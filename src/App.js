@@ -1,7 +1,7 @@
 import './App.css';
 import Footer from './components/footer/Footer';
 import Header from './components/header/Header';
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
 
 import Home from './pages/Home';
 import Author from './pages/Author';
@@ -14,7 +14,7 @@ import Book from './pages/Book';
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Header/>
 
       <Routes> 
@@ -29,7 +29,7 @@ function App() {
         <Route path='/book/:id' element={<Book />} /> 
       </Routes>
       <Footer/>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
